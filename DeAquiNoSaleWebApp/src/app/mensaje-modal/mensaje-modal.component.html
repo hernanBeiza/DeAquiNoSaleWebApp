@@ -1,0 +1,40 @@
+<div class="modal-header">
+  <h4 class="modal-title texto-rojo">Escribe tu secreto aquí...</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+
+				<form [formGroup]="mensajeFormGroup" (ngSubmit)="onSubmit(mensajeFormGroup.value)">
+				  <div class="form-group">
+				  	<!--
+				    <label for="mensaje">Mensaje</label>
+					  -->
+				    <textarea #inputMensaje id="mensaje" name="mensaje" [formControl]="mensajeControl" placeholder="Escribe tu secreto aquí..." class="form-control"></textarea>
+				  </div>
+				  <!--
+				  <button type="submit" class="btn fondo-rojo texto-blanco">Contar mi secreto</button>
+					-->
+				</form>	
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal-footer">
+  <!--
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cerrar</button>
+  -->
+  <button type="button" (click)="onSubmit(mensajeFormGroup.value)" [disabled]="!mensajeFormGroup.valid || flagEnviando" class="btn fondo-rojo texto-blanco">
+    <span *ngIf="flagEnviando"><i class='fa fa-spinner fa-spin'></i> Guardando...</span>
+    <span *ngIf="!flagEnviando">
+		  <fa-icon [icon]="faPen" style="padding-right: 5px;"></fa-icon>¡Contar mi secreto!
+    </span>
+	</button>	
+</div>

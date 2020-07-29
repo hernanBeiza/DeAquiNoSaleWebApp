@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	background-color: #070707;
+}
+
+.texto-negro {
+	color: #070707;
+}
+.texto-rojo {
+	color: #D1345B;
+}
+.texto-gris-claro {
+	color: #ECE8EF;
+}
+.texto-blanco {
+	color: #FFFAFF;
+}
+.texto-azul {
+	color: #4BB3FD;
+}
+.fondo-negro {
+	background-color: #070707;
+}
+.fondo-rojo {
+	background-color: #D1345B;
+}
+.fondo-gris-claro {
+	background-color: #ECE8EF;
+}
+.fondo-blanco {
+	background-color: #FFFAFF;
+}
+.fondo-azul {
+	background-color: #4BB3FD;
+}
+.modal-in {
+  animation-name: modalIN;
+  animation-duration: 0.3s;
+}
+
+.modal-lg, .modal-xl {
+  max-width: 90% !important;
+}
+
+@keyframes modalIN {
+  0%   {transform: scale(0.5)}
+  100% {transform: scale(1)}
+}
+
+
+.swal2-styled.swal2-confirm {
+	background-color: #D1345B !important;	
+}
+
+//Error Icon
+.swal2-icon.swal2-error {
+	border-color: #D1345B !important;
+}
+
+.swal2-x-mark-line-left,.swal2-x-mark-line-right {
+	background-color: #D1345B !important;
+}
+
+//OK Icon
+.swal2-icon.swal2-success .swal2-success-ring {
+	//border-color: #4BB3FD !important;
+	border-color: #D1345B !important;
+	//border-color:rgba(75,179,253,.3) !important;
+}
+.swal2-success-line-tip, .swal2-success-line-long {
+	//background-color: #4BB3FD !important;
+	background-color: #D1345B !important;
+}

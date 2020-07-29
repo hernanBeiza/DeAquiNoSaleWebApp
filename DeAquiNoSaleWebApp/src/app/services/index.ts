@@ -1,0 +1,1 @@
+export { SecretoService } from './secreto.service';
